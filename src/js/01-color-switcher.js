@@ -1,6 +1,5 @@
 const startBtnEl = document.querySelector('[data-start]');
 const stopBtnEl = document.querySelector('[data-stop]');
-
 startBtnEl.addEventListener('click', onStart);
 stopBtnEl.setAttribute('disabled', 'true');
 
@@ -8,8 +7,8 @@ function onStart() {
   changeBgc();
   changeActiveBtn(stopBtnEl, startBtnEl);
   const change = setInterval(changeBgc, 1000);
-
   stopBtnEl.addEventListener('click', onStop);
+
   function onStop() {
     clearInterval(change);
     changeActiveBtn(startBtnEl, stopBtnEl);
