@@ -23,6 +23,7 @@ function onStart(event) {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
   }
+  formEl.reset()
 }
 
 function createPromise(position, delay) {
